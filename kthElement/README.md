@@ -16,3 +16,5 @@ Examples:
 Arr1 = [1,2,3,5,6] ; Arr2= [3,4,5,6,7] ; k= 5 
 Returns: 4 
 Explanation: 5th element in the combined sorted array [1,2,3,3,4,5,5,6,6,7] is 4 
+
+Any tips for tracing through recursive algos by hand general (besides a recursion-tree)? I sometimes find that it is not always straight forward, but maybe it's just me. Maybe the best way is just to use a debugger as shown?
