@@ -1,8 +1,6 @@
 # Time Complexity: O(m*n), where m & n are the dimensions of the 2D array
 
 def lcs_bottomup_helper(str1, str2, len_str1, len_str2):
-   if len_str1 < 0 or len_str2 < 0: return 0 
-   
    cache = [[0 for i in range(len_str2+1)] for i in range(len_str1+1)]
    
    for i in range(len_str1+1): 
@@ -17,6 +15,7 @@ def lcs_bottomup_helper(str1, str2, len_str1, len_str2):
    return cache[len_str1][len_str2]
 
 def lcs_bottomup(str1, str2):
+  if str1 == "" or str2 == "": return 0
   return lcs_bottomup_helper(str1, str2, len(str1) , len(str2))
 
 if __name__ == '__main__':

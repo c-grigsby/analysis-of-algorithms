@@ -1,7 +1,6 @@
 # Time Complexity: O(2^n) 
 
 def lcs_BF_helper(str1, str2, m, n):
-
   if m < 0 or n < 0: return 0
 
   elif str1[m] == str2[n]: return 1 + lcs_BF_helper(str1, str2, m-1, n-1)
