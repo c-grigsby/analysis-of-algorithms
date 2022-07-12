@@ -1,6 +1,5 @@
 def dna_match_topdown_helper(str1, str2, len_str1, len_str2, cached):
   cache = cached
-  
   if len_str1 < 0 or len_str2 < 0: return 0 
   
   if len_str1 == 0 or len_str2 == 0: return cache[len_str1][len_str2]
@@ -18,12 +17,10 @@ def dna_match_topdown_helper(str1, str2, len_str1, len_str2, cached):
 def dna_match_topdown(str1, str2):
   if str1 == "" or str2 == "": return 0
   cache = [[0 for i in range(len(str2)+1)] for i in range((len(str1)+1))]
-  
   return dna_match_topdown_helper(str1, str2, len(str1), len(str2), cache)
 
+
 def dna_match_bottomup_helper(str1, str2, len_str1, len_str2):
-   if len_str1 < 0 or len_str2 < 0: return 0 
-   
    cache = [[0 for i in range(len_str2+1)] for i in range(len_str1+1)]
    
    for i in range(len_str1+1): 
@@ -44,6 +41,5 @@ def dna_match_bottomup(str1, str2):
 if __name__ == '__main__':
   string1 = "ATAGTTCCGTCAAA"
   string2 = "GTGTTCCCGTCAAA"
-  
   print("Length of longest common subsequence using top-down approach:", dna_match_topdown(string1, string2))
   print("Length of longest common subsequence using bottom-up approach:", dna_match_bottomup(string1, string2))
