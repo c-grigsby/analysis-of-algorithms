@@ -9,7 +9,7 @@ def knapsack_BF(max_weight, item_weights, item_values):
   return result
 
 # Driver 
-max_weight = 5
+max_weight = 4
 item_weights = [1, 2, 3, 4]
 item_values = [10, 20, 5, 15]
 print (knapsack_BF(max_weight, item_weights, item_values))

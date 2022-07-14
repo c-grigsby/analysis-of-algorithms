@@ -1,4 +1,5 @@
-# Time Complexity: O(m*n), where m & n are the dimensions of the 2D array
+# Time Complexity: O(m*n) where m & n are the length of the input strings
+# Space Complexity: O(m*n) where m & n are the dimensions of the 2D array
 
 def lcs_bottomup_helper(str1, str2, len_str1, len_str2):
    cache = [[0 for i in range(len_str2+1)] for i in range(len_str1+1)]
