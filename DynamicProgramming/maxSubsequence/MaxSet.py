@@ -1,7 +1,8 @@
-# Time: O(n^2) Space: O(n^2)
+# Time: O(n) Space: O(n^2)
 def max_independent_set(numArr):
   arr_length = len(numArr)
   if arr_length == 0 or arr_length == 1: return numArr
+  elif numArr[0] < 0: return []
   cache = [0 for i in range(arr_length)]
   solution = []
   
@@ -51,7 +52,7 @@ def max_independent_set(numArr):
 
 if __name__ == "__main__":
   numbers1 = [7, 2, 5, 8, 6]
-  numbers2 = [-1, -1, 0]
+  numbers2 = [-1]
   numbers3 = [-1, -1, -10, -34]
-  result = max_independent_set(numbers1)
+  result = max_independent_set(numbers2)
   print("Max subsequence of non-consecutive numbers:", result)
