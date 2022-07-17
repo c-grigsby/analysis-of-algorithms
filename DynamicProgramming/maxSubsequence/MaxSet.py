@@ -1,8 +1,8 @@
 # Time: O(n) Space: O(n^2)
 def max_independent_set(numArr):
   arr_length = len(numArr)
-  if arr_length == 0 or arr_length == 1: return numArr
-  elif numArr[0] < 0: return []
+  if numArr[0] < 0: return []
+  elif arr_length == 0 or arr_length == 1: return numArr
   cache = [0 for i in range(arr_length)]
   solution = []
   
