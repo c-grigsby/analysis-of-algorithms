@@ -1,25 +1,26 @@
-def max_independent_set(nums):
-  memo = {-1: 0, -2: 0}
-  n = len(nums)
-  subset = []
-  for i in range(n):
-      memo[i] = max(memo[i - 1], nums[i]+memo[i - 2], nums[i], memo[i-2])
+# Time: O(n) Space: O(n^2)
+def max_independent_set(numArr):
+    cache = {-1: 0, -2: 0}
+    n = len(numArr)
+    subset = []
 
-  if memo[i] == 0: return [0]
-  
-  k = n - 1
-  values = list(memo.values())
-  while k >= 0:
-      if values[k] != values[k-1]:
-          subset.append(nums[k])
-          k -= 1
-      k -= 1
-      
-  return list(reversed(subset))
+    for i in range(n):
+        cache[i] = max(cache[i - 1], cache[i - 2] + numArr[i])
+
+    i = n - 1
+    while i >= 0:
+        if cache[i] != cache[i-1]:
+            subset.append(numArr[i])
+            i -= 1
+        i -= 1
+
+    if subset == [] and 0 in numArr: subset.append(0)
+
+    return list(reversed(subset))
 
 if __name__ == "__main__":
   numbers1 = [7, 2, 5, 8, 6]
   numbers2 = [-1, -1, 0]
   numbers3 = [-1, -1, -10, -34]
-  result = max_independent_set(numbers2)
+  result = max_independent_set(numbers1)
   print("Max subsequence of non-consecutive numbers:", result)
