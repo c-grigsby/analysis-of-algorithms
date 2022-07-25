@@ -1,11 +1,12 @@
 from copy import deepcopy
 
 def amount_helper(numArr, start, result, remainder, combination):
-  # base case
-  if remainder == 0: # combo satisfies
+  # base cases
+  if remainder == 0: 
     if sorted(combination) not in result: result.append(deepcopy(combination))
     return
-  if remainder < 0: return # combo sum exceeds desired target
+  # combo sum exceeds desired target
+  if remainder < 0: return 
   
   # form the the recurssion tree
   for i in range(start, len(numArr)):

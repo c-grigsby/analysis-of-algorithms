@@ -1,8 +1,9 @@
 from copy import deepcopy
 
-def powerset_helper(pointer, choices_made,input, result):
+def powerset_helper(pointer, choices_made, input, result):
     if (pointer < 0):
-        result.append(deepcopy(choices_made)) # make a deep copy since we are working with objects
+        # make a deep copy since we are working with objects
+        result.append(deepcopy(choices_made)) 
         return 
 
     choices_made.append(input[pointer])
