@@ -1,4 +1,4 @@
-## Implement a backtracking algorithm.
+## Implement a backtracking algorithm
 
 Given a collection of amount values (A) and a target sum (S), find all unique combinations in
 A where the amount values sum up to S. Return these combinations in the form of a list.

@@ -6,7 +6,6 @@ def amount_helper(numArr, start, result, remainder, combination):
     return
   if remainder < 0: return 
   
-  # form the the recurssion tree
   for i in range(start, len(numArr)):
       combination.append(numArr[i])
       amount_helper(numArr, i+1, result, remainder - numArr[i], combination)

@@ -1,5 +1,5 @@
 # Bottom-up approach
-# Time Complexity: O(nW) where n is the number of items & W is the max_weight
+# Time Complexity: O(n*W) where n is the number of items & W is the max_weight
 # Space Complexity: O(W) 
 def knapsack_unbounded(max_weight, item_weights, item_values):
   if max_weight == 0: return 0
