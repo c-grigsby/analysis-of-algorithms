@@ -1,5 +1,5 @@
 # Time Complexity: O(nW) where n is the number of items & W is the max_weight
-# Space Complexity: O(nW) the dimensions of the 2D array
+# Space Complexity: O(nW)
 def knapsack_01(max_weight, item_weights, item_values):
   if max_weight == 0: return 0
   n = len(item_weights)
