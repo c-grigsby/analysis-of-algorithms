@@ -4,17 +4,13 @@ def updateCoordinates(move, current_coordinates):
     row = current_coordinates[0]
     column = current_coordinates[1]
     
-    if move == "L":
-        column -= 1
+    if move == "L": column -= 1
 
-    elif move == "R":
-        column += 1
+    elif move == "R": column += 1
 
-    elif move == "U":
-        row -= 1
+    elif move == "U": row -= 1
 
-    elif move == "D":
-        row += 1
+    elif move == "D": row += 1
         
     return (row, column)
     
@@ -24,17 +20,13 @@ def getCoordinates(path, source):
     column = source[1]
     
     for move in path:
-        if move == "L":
-          column -= 1
+        if move == "L": column -= 1
 
-        elif move == "R":
-          column += 1
+        elif move == "R": column += 1
 
-        elif move == "U":
-          row -= 1
+        elif move == "U": row -= 1
 
-        elif move == "D":
-          row += 1
+        elif move == "D": row += 1
     
     return (row, column)
 
@@ -45,17 +37,13 @@ def getNodesVisited(path, source):
     nodesVisited.append((row, column))
     
     for move in path:
-        if move == "L":
-            column -= 1
+        if move == "L": column -= 1
 
-        elif move == "R":
-            column += 1
+        elif move == "R": column += 1
 
-        elif move == "U":
-            row -= 1
+        elif move == "U": row -= 1
 
-        elif move == "D":
-            row += 1
+        elif move == "D": row += 1
         
         nodesVisited.append((row, column))
     
