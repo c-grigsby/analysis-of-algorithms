@@ -1,16 +1,14 @@
 # Time Complexity: O(2^n) Space Complexity: O(1)
 def distinctWays_BF(num, blocks = [1,2]): 
   if num < 0: return 0
-  
-  if num == 0: return 1
+  elif num == 0: return 1
   
   return distinctWays_BF(num - blocks[0], blocks) + distinctWays_BF(num - blocks[1], blocks)
 
 # Time Complexity: O(2^n) Space Complexity: O(1)
 def distinctWays_BF2(num):  
   if num < 0: return 0
-  
-  if num == 0: return 1
+  elif num == 0: return 1
   
   return distinctWays_BF2(num - 1) + distinctWays_BF(num - 2)
 

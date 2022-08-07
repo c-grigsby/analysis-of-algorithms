@@ -5,20 +5,16 @@ def max_independent_set(numArr):
   elif arr_length == 0 or arr_length == 1: return numArr
   cache = [0 for i in range(arr_length)]
   solution = []
-  
   # base cases for cache
   if arr_length >= 1: cache[0] = numArr[0]
   if arr_length >= 2: cache[1] = max(numArr[0], numArr[1])
-    
   # obtain the max total from the cache
   for i in range(2, arr_length):
     cache[i] = max(numArr[i] + cache[i-2], cache[i-1], numArr[i], cache[i-2])
   maxTotal = cache[arr_length-1]
-  
   # if max is less than or equal to zero 
   if maxTotal < 0: return []
   elif maxTotal == 0: return [0]
-  
   # use the recurrence equation and maxTotal to iterate back for the values
   currentTotal = maxTotal
   i = arr_length-1
