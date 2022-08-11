@@ -8,10 +8,10 @@ def prims(graph):
     selected = [0 for i in range(V)]
     selected[0] = True
     # set number of edge to 0
-    no_edge = 0
+    num_edges = 0
     # print for edge and weight
     print("Edge : Weight\n")
-    while (no_edge < V - 1):
+    while (num_edges < V - 1):
         # For every vertex in the set, find the all adjacent vertices
         minimum = INF
         x = 0
@@ -19,16 +19,15 @@ def prims(graph):
         for i in range(V):
             if selected[i]:
                 for j in range(V):
-                    if ((not selected[j]) and graph[i][j]):
-                        # not in selected and there is an edge
-                        if minimum > graph[i][j]:
+                    # not already selected and there is an edge and the edge weight < current min
+                    if ((not selected[j]) and graph[i][j] and graph[i][j] < minimum):
                             minimum = graph[i][j]
                             x = i
                             y = j
         print(str(x) + "-" + str(y) + ":" + str(graph[x][y]))
         result.append((x, y, graph[x][y]))
         selected[y] = True
-        no_edge += 1
+        num_edges += 1
 
     return result
 
