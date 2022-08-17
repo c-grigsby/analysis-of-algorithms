@@ -1,4 +1,4 @@
-# If the values of the blocks can be hard-coded (HC), this algorithm can be made slightly more efficient than the dynamic bottom-down approach. Base values will need to be computed then initilaized for i, i+1, i+2, these are then used to calculate the value of i+3 to n. 
+# If the values of the blocks can be hard-coded (HC), this algorithm can be made slightly more efficient than the dynamic bottom-up approach. Base values will need to be computed then initilaized for i, i+1, i+2, these are then used to calculate the value of i+3 to n. 
 
 # Time Complexity: O(n) Space Complexity: O(n)
 def distinctWays_bottomup(num):
