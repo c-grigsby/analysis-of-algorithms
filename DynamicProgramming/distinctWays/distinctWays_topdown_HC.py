@@ -19,5 +19,5 @@ def distinctWays_topdown(num):
   return distinctWays_topdown_helper(num, cache)
 
 if __name__ == "__main__":
-  num = 2
+  num = 5
   print("The number of distinct ways the blocks can form the number is:", distinctWays_topdown(num))  
