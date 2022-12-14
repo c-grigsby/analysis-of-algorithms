@@ -10,7 +10,6 @@ class Graph:
         self.graph[u].append(v)
 
 
-
 def helperFunction(myGraph, currentNode, visited, result):
     # Mark the current node as visited
     visited[currentNode] = True 

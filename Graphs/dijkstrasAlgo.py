@@ -1,6 +1,5 @@
 import heapq
 
-
 def calculate_distances(graph, starting_vertex):
     distances = {vertex: float('infinity') for vertex in graph}
     distances[starting_vertex] = 0
