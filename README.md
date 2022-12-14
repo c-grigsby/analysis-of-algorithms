@@ -2,21 +2,21 @@
 
 # Analysis of Algorithms 
 
-The repository hosts a collection of algorithms utilized to discuss a variety of algorithmic techniques and examine asymptotic behavior
+This repository hosts a collection of programs utilized to discuss a variety of algorithmic techniques and examine asymptotic behavior
 
-<img src="Public/algorithm.jpg" height="120"/>
+<img src="Public/algorithm.jpg" height="135"/>
 
 ---
 
-Backtracking
+[Backtracking](./Backtracking/)
 
-Divide and Conquer
+[Divide and Conquer](./DivideAndConquer/)
 
-Dynamic Programming
+[Dynamic Programming](./DynamicProgramming/)
 
-Graphs
+[Graphs](./Graphs/)
 
-Greedy Algorithms
+[Greedy Algorithms](./GreedyAlgorithms/)
 
 ---
 

@@ -1,4 +1,4 @@
-# Part A
+# Pseudocode
 #
 # def kthElement(Arr1, Arr2, k)                        // k is kth position of the element to return
 # declare i, j, current_pos, kth_position = k-1
@@ -30,7 +30,7 @@
 #
 # Note: Based on the description provided, the element in position 0 of the array would be the 1st element
 
-# PART B
+
 def kthElement(Arr1, Arr2, k): 
   i = 0 
   j = 0 

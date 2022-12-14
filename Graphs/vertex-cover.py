@@ -1,4 +1,4 @@
-# print Vertex Cover of a given undirected graph 
+# vertex-cover.py: prints a Vertex Cover of a given undirected graph 
 from collections import defaultdict 
 
 # This class represents a directed graph using adjacency list representation 
@@ -16,10 +16,8 @@ class Graph:
 
 	# The function to print vertex cover 
 	def printVertexCover(self):
-		
-		# Initialize all vertices as not visited. 
+		# Initialize all vertices as not visited
 		visited = [False] * (self.V)
-		
 		# Consider all edges one by one 
 		for u in range(self.V):
 			# An edge is only picked when both visited[u] and visited[v] are false
